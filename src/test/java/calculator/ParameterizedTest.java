@@ -1,7 +1,7 @@
 package calculator;
 
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -10,9 +10,9 @@ import java.util.Arrays;
 @RunWith(Parameterized.class)
 public class ParameterizedTest {
 
-    private int valA;
-    private int valB;
-    private int result;
+    int valA;
+    int valB;
+    int result;
 
     public ParameterizedTest(int valA, int valB, int result) {
         this.valA = valA;
@@ -33,7 +33,7 @@ public class ParameterizedTest {
     }
 
     @Test
-    void addition() {
+    public void addition() {
         Assertions.assertEquals(result, Calculator.addition(valA, valB), "Wrong calc");
     }
 }
